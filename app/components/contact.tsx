@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Contact = () => {
@@ -30,9 +31,9 @@ const Contact = () => {
                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                   EMAIL
                 </h2>
-                <a className="text-blue-500 leading-relaxed">
-                  hamzaatif.engineer@gmail.com
-                </a>
+                <Link href={"mailto:hamzaatif.engineer@gmail.com"} className="text-blue-500 leading-relaxed" target="_black">
+                  hamzaatif.engineer
+                </Link>
                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                   phone
                 </h2>
