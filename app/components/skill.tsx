@@ -1,6 +1,14 @@
 import React from "react";
 
-const Skill = () => {
+// Define props for the SkillItem component
+interface SkillItemProps {
+  title: string;
+  level: string;
+  width: string;
+}
+
+// Main Skill component
+const Skill: React.FC = () => {
   return (
     <div id="skills">
       <section className="text-center p-6 bg-gray-50">
@@ -24,8 +32,8 @@ const Skill = () => {
   );
 };
 
-// Single Skill Item Component for reusability and readability
-const SkillItem = ({ title, level, width }) => (
+// SkillItem component with props typed using the SkillItemProps interface
+const SkillItem: React.FC<SkillItemProps> = ({ title, level, width }) => (
   <div className="bg-white shadow rounded-lg p-4">
     <h3 className="text-blue-600 font-semibold text-lg mb-2">{title}</h3>
     <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
